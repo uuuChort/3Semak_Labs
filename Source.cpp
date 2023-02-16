@@ -8,7 +8,7 @@ int main()
 	unsigned long long int k;
 	cin >> k;
 	unsigned long long int g = k, a = 1, b = 1, c = 1;
-	//Максимальное степень числа
+	//РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ СЃС‚РµРїРµРЅСЊ С‡РёСЃР»Р°
 	while (g >= 3) {
 		a = a + 1;
 		g = g / 3;
@@ -24,7 +24,7 @@ int main()
 		g = g / 7;
 	}
 	
-	//перебор
+	//РїРµСЂРµР±РѕСЂ
 	double ss;
 	for (int i = 0; i <= a; i++) {
 		for (int j = 0; j <= b; j++) {
