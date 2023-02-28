@@ -177,7 +177,7 @@ void main()
 	std::vector <int> cV;
 	std::vector <int> rV;
 	int maxElem;
-	std::string str = "8(3(1,6(4,7)),10(,14(13,)))"; // ëèíåéíî ñêîáî÷íàÿ ïîñëåä
+	std::string str = "8(3(1,6(4,7)),10(,14(13,)))"; // линейно скобочная
 	Tree tree;
 	tree = tree.parse(str);
 	Tree newTree = tree;
