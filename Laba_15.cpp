@@ -24,7 +24,7 @@ public:
 		string = str;
 	}
 
-	// Функция добавления
+	// РґРѕР±Р°РІР»РµРЅРёРµ
 	void add(const int v) {
 		if (v > value) {
 			if (r == nullptr) {
@@ -45,7 +45,7 @@ public:
 	}
 
 
-	// Функция перевода числа в строку
+	// РїРµСЂРµРІРѕРґРёС‚ С‡РёСЃР»Рѕ РІ СЃС‚СЂРѕРєСѓ
 	std::string toString(int value)
 	{
 		std::string result;
@@ -61,7 +61,7 @@ public:
 		return result;
 	}
 
-	// Преобразование дерева в линейно скобочную последовательность (для вывода)
+	// РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РґРµСЂРµРІР° РІ Р»РёРЅРµР№РЅРѕ СЃРєРѕР±РѕС‡РЅСѓСЋ РґР»СЏ РІС‹РІРѕРґР°
 	void print(Tree* tree)
 	{
 		string += toString(tree->value);
@@ -88,13 +88,13 @@ public:
 		print(this);
 	}
 
-	// проверка на число
+	// РїСЂРѕРІРµСЂРєР° РЅР° С‡РёСЃР»Рѕ
 	bool isDigital(const char elem)
 	{
 		return (elem >= '0' && elem <= '9') ? true : false;
 	}
 
-	// Функция для прохода по строке и преобразования ее в бинарное дерево
+	// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РїСЂРѕС…РѕРґР° РїРѕ СЃС‚СЂРѕРєРµ Рё РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РµРµ РІ Р±РёРЅР°СЂРЅРѕРµ РґРµСЂРµРІРѕ
 	Tree parse(std::string str)
 	{
 		Tree result;
@@ -137,7 +137,7 @@ public:
 	}
 };
 
-//прямой обход
+//РїСЂСЏРјРѕР№ РѕР±С…РѕРґ
 void Direct(std::vector <int>& v, const Tree* tree)
 {
 	if (tree != nullptr)
@@ -148,7 +148,7 @@ void Direct(std::vector <int>& v, const Tree* tree)
 	}
 }
 
-//кольцевой обход
+//РєРѕР»СЊС†РµРІРѕР№ РѕР±С…РѕРґ
 void Centeral(std::vector<int>& v, const Tree* tree)
 {
 	if (tree != nullptr)
@@ -159,7 +159,7 @@ void Centeral(std::vector<int>& v, const Tree* tree)
 	}
 }
 
-//обратный обход
+//РѕР±СЂР°С‚РЅС‹Р№ РѕР±С…РѕРґ
 void Reverse(std::vector<int>& v, const Tree* tree)
 {
 	if (tree != nullptr)
@@ -177,7 +177,7 @@ void main()
 	std::vector <int> cV;
 	std::vector <int> rV;
 	int maxElem;
-	std::string str = "8(3(1,6(4,7)),10(,14(13,)))"; // линейно скобочная послед
+	std::string str = "8(3(1,6(4,7)),10(,14(13,)))"; // Г«ГЁГ­ГҐГ©Г­Г® Г±ГЄГ®ГЎГ®Г·Г­Г Гї ГЇГ®Г±Г«ГҐГ¤
 	Tree tree;
 	tree = tree.parse(str);
 	Tree newTree = tree;
